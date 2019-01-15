@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema Namespace="ZDEMO_FLIGHT_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="Flight" sap:content-version="1">
+				<Key><PropertyRef Name="Carrid"/><PropertyRef Name="Connid"/><PropertyRef Name="Fldate"/></Key><Property Name="Carrid" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Airline" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Connid" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Flight Number" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Fldate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:label="Date" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Carrname" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Airline" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Countryfr" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Country" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Cityfrom" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Depart.city" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Airpfrom" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Dep. airport" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Countryto" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Country" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Cityto" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Arrival city" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Airpto" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Dest. airport" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Deptime" Type="Edm.Time" Nullable="false" Precision="0" sap:label="Departure" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Arrtime" Type="Edm.Time" Nullable="false" Precision="0" sap:label="Arrival Time" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Distance" Type="Edm.Decimal" Nullable="false" Precision="9" Scale="4" sap:unit="Distid" sap:label="Distance"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Distid" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Distance in" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/><Property Name="Fltype" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Charter" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Period" Type="Edm.Byte" Nullable="false" sap:label="n day(s) later" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Price" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unit="Currency" sap:label="Airfare"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Airline Currency" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/><Property Name="Planetype" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Plane Type" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Seatsmax" Type="Edm.Int32" Nullable="false" sap:label="Max. capacity econ." sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Seatsocc" Type="Edm.Int32" Nullable="false" sap:label="Occupied econ." sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Paymentsum" Type="Edm.Decimal" Nullable="false" Precision="18" Scale="3" sap:unit="Currency" sap:label="Total"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="SeatsmaxB" Type="Edm.Int32" Nullable="false" sap:label="Max. capacity bus." sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="SeatsoccB" Type="Edm.Int32" Nullable="false" sap:label="Occupied bus." sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="SeatsmaxF" Type="Edm.Int32" Nullable="false" sap:label="Max. capacity 1st" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="SeatsoccF" Type="Edm.Int32" Nullable="false" sap:label="Occupied 1st" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="City_From" sap:content-version="1">
+				<Key><PropertyRef Name="Cityfrom"/></Key><Property Name="Cityfrom" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Depart.city" sap:creatable="false"
+					sap:updatable="false"/></EntityType>
+			<EntityType Name="City_To" sap:content-version="1">
+				<Key><PropertyRef Name="Cityto"/></Key><Property Name="Cityto" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Arrival city" sap:creatable="false"
+					sap:updatable="false"/></EntityType>
+			<EntityContainer Name="ZDEMO_FLIGHT_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="FlightSet" EntityType="ZDEMO_FLIGHT_SRV.Flight" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:searchable="true" sap:pageable="false" sap:requires-filter="true" sap:content-version="1"/><EntitySet Name="City_FromSet" EntityType="ZDEMO_FLIGHT_SRV.City_From" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:searchable="true" sap:pageable="false" sap:content-version="1"/><EntitySet Name="City_ToSet" EntityType="ZDEMO_FLIGHT_SRV.City_To" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:searchable="true" sap:pageable="false" sap:content-version="1"/></EntityContainer><atom:link rel="self"
+				href="https://webidecp-s0016490982trial.dispatcher.hanatrial.ondemand.com/destinations/D75_gateway_HTTP/sap/opu/odata/sap/ZDEMO_FLIGHT_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/><atom:link rel="latest-version"
+				href="https://webidecp-s0016490982trial.dispatcher.hanatrial.ondemand.com/destinations/D75_gateway_HTTP/sap/opu/odata/sap/ZDEMO_FLIGHT_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
